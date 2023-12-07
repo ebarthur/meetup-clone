@@ -23,3 +23,20 @@ const Home = () => {
 
     return <div>{/*--render events from the server--*/}</div>;
 };
+export const fetchEventBySlug = (slug, setEvent) => {
+    fetch("http://localhost:4000/event/slug", {
+        method: "POST",
+        body: JSON.stringify({ slug }),
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.message) {
+                setEvent(data.event);
+            }
+        })
+        .catch((err) => console.error(err));
+};
