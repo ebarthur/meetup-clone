@@ -262,3 +262,20 @@ import { fetchEventBySlug } from "../utils/util"
     };
 
 export default EventDetails;
+
+import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { fetchEventBySlug } from "../utils/util"
+
+export const EventDetails = () => {
+    const [eventDetails, setEventDetails] = useState({});
+    const { slug } = useParams();
+
+    useEffect(() => {
+        fetchEventBySlug(slug, setEventDetails);
+        setLoading(false);
+    }, [slug]);
+
+    return <div>{/*--displays event details --*/}</div>;
+};
