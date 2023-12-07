@@ -57,3 +57,9 @@ const events = [
             "Dear attendee,\n We hope this message finds you well! We're excited to invite you to our upcoming Novu Community Call, where we will come together to share insights, updates, and engage in meaningful discussions. Your presence and contributions are highly valued as we continue to grow and strengthen our vibrant Novu community.",
     },
 ];
+app.get("/events", (req, res) => {
+    res.json({
+        message: "Success!",
+        events,
+    });
+});
