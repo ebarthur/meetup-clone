@@ -34,7 +34,7 @@ To get started with the Meetup Clone locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone git@github.com:ebarthur/meetup-clone.git
+   git@github.com:ebarthur/meetup-clone.git
    ```
 
 2. **Navigate to the Project Directory:**
