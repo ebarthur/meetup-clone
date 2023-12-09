@@ -1,3 +1,11 @@
+function App() {
+    return (
+        <div>
+            <p>Hello World!</p>
+        </div>
+    );
+}
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
